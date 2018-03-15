@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="auto cell">
         <header>
-            <h2><slot></slot> {{set.name}}</h2>
+            <h2><slot>{{set.name}}</slot></h2>
         </header>
         <transition-group tag="main">
             <workout v-for="workout in set.workouts" :workout="workout" :key="workout.id"></workout>

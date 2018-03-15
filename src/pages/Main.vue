@@ -3,14 +3,14 @@
       <transition name="main" mode="out-in">
         <h2 v-if="!isSignedIn">You need to be logged in order to see your workouts.</h2>
         <workout-set v-else :set="todaysWorkoutSet">
-          Todays workout is
+          Todays workout
         </workout-set>
       </transition>
     </main>
 </template>
 <script>
-import { action_names } from './vuex/actions';
-import workoutset from './components/workoutSetComponent';
+import { action_names } from '../vuex/actions';
+import workoutset from '../components/workoutSetComponent';
 
 const { HEADING } = action_names;
 
@@ -25,7 +25,7 @@ export default {
       return this.$store.getters.isSignedIn;
     },
     todaysWorkoutSet(){
-      return this.$store.getters.getTodaysWorkout;
+      return this.$store.getters.todaysWorkout;
     }
   },
   methods: {

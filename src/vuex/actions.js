@@ -6,10 +6,15 @@ export const action_names = {
     HEADING: 'heading',
     SIGN_IN: 'signIn',
     SIGN_OUT: 'signOut',
-    INIT_APP: 'initApp'
+    INIT_APP: 'initApp',
+    ADD_WORKOUT_SET: 'addWorkoutSet'
 }
 
 export default {
+    addWorkoutSet({ commit }, workoutSet){
+        workoutSet['datelong'] = Date.now();
+        commit(mutation_names.ADD_WORKOUT_SET, workoutSet)
+    },
     signIn({ commit }){
         const user = firebase.auth().currentUser;
         if(!user){

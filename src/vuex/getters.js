@@ -11,7 +11,10 @@ export default {
     isSigningIn(state){
         return state.isSigningIn;
     },
-    getTodaysWorkout(state){
+    todaysWorkout(state){
         return state.workoutSets[0];
+    },
+    workoutSets(state) {
+        return state.workoutSets;
     }
 }

@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+
 import App from './App.vue'
-import Main from './Main.vue'
 
 import store from './vuex/store';
+import router from './router/router';
 
 import * as firebase from 'firebase';
+
+Vue.use(VueRouter)
 
 const fbConfig = {
   apiKey: "AIzaSyC312p8sgkOTJUhTfMW59o3TXotvmAYk8w",
@@ -18,16 +21,6 @@ const fbConfig = {
 
 const fbApp = firebase.initializeApp(fbConfig);
 
-Vue.use(VueRouter)
-
-const routes = [
-  { path: '/', component: Main }
-]
-
-const router = new VueRouter({
-  routes,
-  mode: 'history'
-})
 
 new Vue({
   el: '#app',

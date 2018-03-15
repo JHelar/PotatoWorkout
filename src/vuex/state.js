@@ -5,6 +5,7 @@ export default {
     workoutSets: [
         {
             id: 'workoutSet0',
+            datelong: Date.now(),
             name: 'Leg Day',
             workouts: [
                 {

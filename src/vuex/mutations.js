@@ -3,7 +3,8 @@ export const mutation_names = {
     HEADING: 'heading',
     USER: 'user',
     IS_SIGNED_IN: 'isSignedIn',
-    IS_SIGNING_IN: 'isSigningIn'
+    IS_SIGNING_IN: 'isSigningIn',
+    ADD_WORKOUT_SET: 'addWorkoutSet'
 }
 
 export default {
@@ -18,5 +19,8 @@ export default {
     },
     isSigningIn(state, isSigningIn){
         state.isSigningIn = isSigningIn;
+    },
+    addWorkoutSet(state, workoutSet){
+        state.workoutSets.push(workoutSet);
     }
 }
